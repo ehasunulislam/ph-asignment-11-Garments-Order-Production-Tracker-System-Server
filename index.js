@@ -469,7 +469,7 @@ async function run() {
 
     /* review related APIs start */
     app.get("/reviews", async (req, res) => {
-      const cursor = reviewCollection.find().sort({ date: -1 });
+      const cursor = reviewCollection.find().sort({date: -1});
       const result = await cursor.toArray();
       res.send(result);
     });
